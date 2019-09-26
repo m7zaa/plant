@@ -8,16 +8,16 @@ namespace Garden
     {
     static void Main()
     {
-
+        Sun sun = new Sun();
         Plant plant = new Plant();
-
+        // Plant.Show;
         ConsoleKeyInfo cki = Console.ReadKey(true);
         while (cki.KeyChar != 'q')
         {
             cki = Console.ReadKey(true);
             if(!Console.KeyAvailable)
             {
-                plant.Action(cki.KeyChar);
+                plant.Action(cki.KeyChar, sun.YSun, sun.XSun);
             }
         }
 
